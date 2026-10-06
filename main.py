@@ -1,6 +1,6 @@
 """Load one user through the shared lookup."""
 
-from users import get_user
+from profileapp.users import get_user
 
 
 def main():
