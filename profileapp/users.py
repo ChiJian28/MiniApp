@@ -15,7 +15,7 @@ class UnknownUser(LookupError):
         super().__init__(f"No user with id {user_id}")
 
 
-def get_user(user_id):
+def fetch_user(user_id):
     """Return a copy of the directory record for user_id."""
     try:
         key = int(user_id)

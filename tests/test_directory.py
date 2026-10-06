@@ -6,12 +6,12 @@ from contextlib import redirect_stderr, redirect_stdout
 
 from profileapp.cli import main
 from profileapp.roster import team_roster
-from profileapp.users import UnknownUser, get_user
+from profileapp.users import UnknownUser, fetch_user
 
 
 class GetUserContractTests(unittest.TestCase):
     def test_known_id_returns_the_directory_record(self):
-        user = get_user(1)
+        user = fetch_user(1)
         self.assertEqual(user["name"], "Alice Chen")
         self.assertEqual(user["email"], "alice.chen@example.com")
         self.assertEqual(user["team"], "Engineering")
@@ -19,7 +19,7 @@ class GetUserContractTests(unittest.TestCase):
 
     def test_missing_id_raises_unknown_user(self):
         with self.assertRaises(UnknownUser):
-            get_user(99)
+            fetch_user(99)
 
     def test_team_roster_looks_up_each_member(self):
         members = team_roster("Engineering")
