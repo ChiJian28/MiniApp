@@ -6,7 +6,7 @@ from contextlib import redirect_stderr, redirect_stdout
 
 from profileapp.cli import main
 from profileapp.roster import team_roster
-from profileapp.users import UnknownUser, get_user
+from profileapp.directory import UnknownUser, get_user
 
 
 class GetUserContractTests(unittest.TestCase):

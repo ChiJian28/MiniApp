@@ -1,7 +1,7 @@
 """Team groupings built through the shared user lookup."""
 
 from profileapp.store import load_users
-from profileapp.users import get_user
+from profileapp.directory import get_user
 
 
 def member_profile(user_id):

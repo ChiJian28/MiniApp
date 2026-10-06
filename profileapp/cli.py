@@ -6,7 +6,7 @@ import sys
 from profileapp.display import format_listing, format_profile
 from profileapp.roster import member_profile, team_roster
 from profileapp.store import load_users
-from profileapp.users import UnknownUser
+from profileapp.directory import UnknownUser
 
 
 def build_parser():
