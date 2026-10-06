@@ -15,7 +15,7 @@ class UnknownUser(LookupError):
         super().__init__(f"No user with id {user_id}")
 
 
-def get_user(user_id):
+def get_user(user_id, include_email):
     """Return a copy of the directory record for user_id."""
     try:
         key = int(user_id)
@@ -30,7 +30,8 @@ def get_user(user_id):
     return {
         "id": record["id"],
         "name": record["name"],
-        "email": record["email"],
+        "email": record["email"] if include_email else "(hidden)",
         "team": record["team"],
         "title": record["title"],
     }
+

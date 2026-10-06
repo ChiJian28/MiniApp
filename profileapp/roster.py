@@ -6,7 +6,7 @@ from profileapp.users import get_user
 
 def member_profile(user_id):
     """Return the directory profile for one person."""
-    return get_user(user_id)
+    return get_user(user_id, include_email=True)
 
 
 def team_roster(team):
@@ -16,4 +16,4 @@ def team_roster(team):
         for record in load_users().values()
         if record["team"] == team
     )
-    return [get_user(user_id) for user_id in ids]
+    return [get_user(user_id, include_email=True) for user_id in ids]

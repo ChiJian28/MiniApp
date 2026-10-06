@@ -11,7 +11,7 @@ from profileapp.users import UnknownUser, get_user
 
 class GetUserContractTests(unittest.TestCase):
     def test_known_id_returns_the_directory_record(self):
-        user = get_user(1)
+        user = get_user(1, include_email=True)
         self.assertEqual(user["name"], "Alice Chen")
         self.assertEqual(user["email"], "alice.chen@example.com")
         self.assertEqual(user["team"], "Engineering")
@@ -19,7 +19,7 @@ class GetUserContractTests(unittest.TestCase):
 
     def test_missing_id_raises_unknown_user(self):
         with self.assertRaises(UnknownUser):
-            get_user(99)
+            get_user(99, include_email=True)
 
     def test_team_roster_looks_up_each_member(self):
         members = team_roster("Engineering")
