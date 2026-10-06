@@ -1,12 +1,6 @@
-"""Load one user through the shared lookup."""
+"""Run the team directory from the project root."""
 
-from profileapp.users import get_user
-
-
-def main():
-    user = get_user(1)
-    print(f"Loads user {user['name']} (ID {user['id']})")
-
+from profileapp.cli import main
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
