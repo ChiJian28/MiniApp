@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Alice Chen",
+    "email": "alice.chen@example.com",
+    "team": "Engineering",
+    "title": "Backend engineer"
+  },
+  {
+    "id": 2,
+    "name": "Ben Wong",
+    "email": "ben.wong@example.com",
+    "team": "Support",
+    "title": "Support lead"
+  },
+  {
+    "id": 3,
+    "name": "Cara Singh",
+    "email": "cara.singh@example.com",
+    "team": "Engineering",
+    "title": "Product designer"
+  }
+]
